@@ -150,6 +150,10 @@ class syntax_plugin_simplenavi extends DokuWiki_Syntax_Plugin {
                 return $conf['start'];
             }
         }
+        
+        //Capitalize title & replace '_' with ' ' 
+        $p = ucwords(str_replace("_", " ", $p));
+        
         return $p;
     }
 
